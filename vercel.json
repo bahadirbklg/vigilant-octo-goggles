@@ -1,7 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "out",
   "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": "out",
+  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/(.*)",
