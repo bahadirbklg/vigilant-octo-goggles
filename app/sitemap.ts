@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next"
 
+// Required for static export
+export const dynamic = "force-static"
+
 // Base URL for your site
 const baseUrl = "https://bahadirbakkaloglu.tech"
 
