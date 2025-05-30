@@ -1,15 +1,35 @@
 {
   "framework": "nextjs",
-  "installCommand": "pnpm install --frozen-lockfile",
-  "rewrites": [
+  "outputDirectory": "out",
+  "trailingSlash": true,
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/www.bahadirbakkaloglu.tech/(.*)",
+      "destination": "https://bahadirbakkaloglu.tech/$1",
+      "permanent": true
     }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_next/image(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

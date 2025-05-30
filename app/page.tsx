@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ObfuscatedEmail } from "@/components/obfuscated-email"
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <div className="flex items-center gap-4">
           <Image
             src="/profile.jpeg"
-            alt="Bahadir Bakkaloglu"
+            alt="Bahadir Bakkaloglu - Site Reliability Engineer"
             width={80}
             height={80}
             className="rounded-full"
@@ -412,7 +413,7 @@ export default function Home() {
         <h2 className="text-lg font-bold mb-2">Contact</h2>
         <ul className="text-sm space-y-1">
           <li>
-            Email: <span className="select-all">bahadirbklg@gmail.com</span>
+            Email: <ObfuscatedEmail user="bahadirbklg" domain="gmail.com" showIcon={false} />
           </li>
           <li>
             Phone: <span className="select-all">05359483985</span>
