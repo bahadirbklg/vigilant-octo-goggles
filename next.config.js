@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  output: "export",
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: "out",
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,7 +12,11 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    loader: "custom",
+    loaderFile: "./image-loader.js",
   },
+  assetPrefix: process.env.NODE_ENV === "production" ? "" : "",
+  basePath: "",
 }
 
 module.exports = nextConfig

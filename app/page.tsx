@@ -12,6 +12,7 @@ export default function Home() {
             height={80}
             className="rounded-full"
             priority
+            unoptimized
           />
           <div>
             <h1 className="text-xl font-bold">Bahadir Bakkaloglu</h1>
@@ -85,6 +86,7 @@ export default function Home() {
                 width={60}
                 height={60}
                 className="rounded-lg"
+                unoptimized
               />
               <div>
                 <h3 className="font-semibold text-blue-800">AWS Certified SysOps Administrator</h3>
@@ -105,6 +107,7 @@ export default function Home() {
                 width={60}
                 height={60}
                 className="rounded-lg"
+                unoptimized
               />
               <div>
                 <h3 className="font-semibold text-gray-800">Red Hat Certified System Administrator</h3>
