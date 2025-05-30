@@ -1,5 +1,37 @@
 import Image from "next/image"
-import { ObfuscatedEmail } from "@/components/obfuscated-email"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Bahadir Bakkaloglu | Site Reliability Engineer",
+  description:
+    "Experienced Site Reliability Engineer specializing in cloud infrastructure, automation, and high-availability systems with expertise in AWS, Kubernetes, and DevOps practices.",
+  keywords:
+    "Site Reliability Engineer, SRE, Cloud Infrastructure, Automation, DevOps, Kubernetes, AWS, Monitoring, Incident Response",
+  openGraph: {
+    title: "Bahadir Bakkaloglu | Site Reliability Engineer",
+    description:
+      "Site Reliability Engineer specializing in cloud infrastructure, automation, and high-availability systems.",
+    url: "https://bahadirbakkaloglu.tech",
+    siteName: "Bahadir Bakkaloglu Portfolio",
+    images: [
+      {
+        url: "https://bahadirbakkaloglu.tech/profile.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Bahadir Bakkaloglu - Site Reliability Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bahadir Bakkaloglu | Site Reliability Engineer",
+    description:
+      "Site Reliability Engineer specializing in cloud infrastructure, automation, and high-availability systems.",
+    images: ["https://bahadirbakkaloglu.tech/profile.jpeg"],
+  },
+}
 
 export default function Home() {
   return (
@@ -13,7 +45,6 @@ export default function Home() {
             height={80}
             className="rounded-full"
             priority
-            unoptimized
           />
           <div>
             <h1 className="text-xl font-bold">Bahadir Bakkaloglu</h1>
@@ -87,7 +118,6 @@ export default function Home() {
                 width={60}
                 height={60}
                 className="rounded-lg"
-                unoptimized
               />
               <div>
                 <h3 className="font-semibold text-blue-800">AWS Certified SysOps Administrator</h3>
@@ -108,7 +138,6 @@ export default function Home() {
                 width={60}
                 height={60}
                 className="rounded-lg"
-                unoptimized
               />
               <div>
                 <h3 className="font-semibold text-gray-800">Red Hat Certified System Administrator</h3>
@@ -413,7 +442,7 @@ export default function Home() {
         <h2 className="text-lg font-bold mb-2">Contact</h2>
         <ul className="text-sm space-y-1">
           <li>
-            Email: <ObfuscatedEmail user="bahadirbklg" domain="gmail.com" showIcon={false} />
+            Email: <span className="select-all">bahadirbklg@gmail.com</span>
           </li>
           <li>
             Phone: <span className="select-all">05359483985</span>

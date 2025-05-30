@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { ArrowLeft, Home, Search } from "lucide-react"
+import type { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Page Not Found | Bahadir Bakkaloglu",
   description: "The page you are looking for does not exist.",
 }
@@ -21,7 +21,6 @@ export default function NotFound() {
             href="/"
             className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
           >
-            <Home size={18} />
             Back to Homepage
           </Link>
 
@@ -30,7 +29,6 @@ export default function NotFound() {
               href="/#experience"
               className="flex-1 flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 hover:bg-gray-50 rounded-md transition-colors"
             >
-              <Search size={18} />
               Experience
             </Link>
 
@@ -38,7 +36,6 @@ export default function NotFound() {
               href="/#contact"
               className="flex-1 flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 hover:bg-gray-50 rounded-md transition-colors"
             >
-              <ArrowLeft size={18} />
               Contact
             </Link>
           </div>

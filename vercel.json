@@ -1,14 +1,7 @@
 {
   "framework": "nextjs",
-  "outputDirectory": "out",
-  "trailingSlash": true,
-  "redirects": [
-    {
-      "source": "/www.bahadirbakkaloglu.tech/(.*)",
-      "destination": "https://bahadirbakkaloglu.tech/$1",
-      "permanent": true
-    }
-  ],
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run build",
   "headers": [
     {
       "source": "/static/(.*)",
@@ -36,14 +29,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm run build",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
