@@ -13,9 +13,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Remove custom loader for static export
-  assetPrefix: process.env.NODE_ENV === "production" ? "" : "",
-  basePath: "",
+  // Ensure proper static export
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 }
 
 module.exports = nextConfig
