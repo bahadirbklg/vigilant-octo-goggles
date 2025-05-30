@@ -2,10 +2,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "out",
   "framework": "nextjs",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
