@@ -1,8 +1,8 @@
 {
   "framework": "nextjs",
-  "buildCommand": "next build",
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install --frozen-lockfile",
   "outputDirectory": "out",
-  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/(.*)",
