@@ -1,42 +1,57 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://bahadirbakkaloglu.tech"
+  const lastModified = new Date()
+
   return [
     {
-      url: "https://bahadirbakkaloglu.tech",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+      url: baseUrl,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1.0,
+      alternates: {
+        languages: {
+          en: `${baseUrl}`,
+          tr: `${baseUrl}`,
+        },
+      },
     },
     {
-      url: "https://bahadirbakkaloglu.tech/#about",
-      lastModified: new Date(),
+      url: `${baseUrl}/#about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#experience`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#certifications`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://bahadirbakkaloglu.tech/#experience",
-      lastModified: new Date(),
+      url: `${baseUrl}/#skills`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://bahadirbakkaloglu.tech/#certifications",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://bahadirbakkaloglu.tech/#skills",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: "https://bahadirbakkaloglu.tech/#contact",
-      lastModified: new Date(),
+      url: `${baseUrl}/#education`,
+      lastModified,
       changeFrequency: "yearly",
-      priority: 0.6,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/#contact`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.7,
     },
   ]
 }
